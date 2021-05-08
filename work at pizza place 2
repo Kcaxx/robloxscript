@@ -1,0 +1,51 @@
+plr = game.Players.LocalPlayer
+char = plr.Character
+Houses = game.Workspace.Houses:GetChildren()
+Pizzas = plr.Backpack:GetChildren()
+
+function getPizza()
+   plr = game.Players.LocalPlayer
+   char = plr.Character
+   workspaceChildren = game.Workspace:GetChildren()
+   PizzaNames = {"A1", "A2", "A3", "A4", "B1", "B2", "B3", "B", "C1", "C2", "C3", "C4"}
+   for i, child in ipairs(workspaceChildren) do
+       for i, pizzaNameEntity in ipairs(PizzaNames) do
+           if pizzaNameEntity == child.Name then
+               plrCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+   
+        local x,y,z,r00,r01,r02,r10,r11,r12,r20,r21,r22 = plrCFrame:components()
+   
+        char.HumanoidRootPart.CFrame = CFrame.new(child.Handle.Position.X, child.Handle.Position.Y, child.Handle.Position.Z, r00,r01,r02,r10,r11,r12,r20,r21,r22)
+               
+             
+           end
+       end
+   end
+end
+
+function DeliverPizza()
+   for i, house in ipairs(Houses) do
+       houseAddr = house.Address.Value
+       for i, pizza in ipairs(Pizzas) do
+           if pizza.Name ~= "Shortcut" and pizza.Name ~= "Snowball" then
+               mainPizza = pizza
+               pizzaAddr = pizza.Name
+               break
+           end
+       end
+       if houseAddr == pizzaAddr then
+           print("Address : "..houseAddr)
+           possibleSizes = house.Upgrades:GetChildren()
+           for i, size in ipairs(possibleSizes) do
+               door = size.GivePizza
+               break
+           end
+           plrCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+   
+    local x,y,z,r00,r01,r02,r10,r11,r12,r20,r21,r22 = plrCFrame:components()
+   
+    char.Humanoid:EquipTool(mainPizza)
+    char.HumanoidRootPart.CFrame = CFrame.new(door.Position.X,door.Position.Y,door.Position.Z, r00,r01,r02,r10,r11,r12,r20,r21,r22)
+       end
+   end
+end
