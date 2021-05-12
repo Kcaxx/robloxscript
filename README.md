@@ -1,4 +1,4 @@
-If you see any of your scripts here and would like to have your credits or I remove them, you can contact me at: Kcaxx # 4845. It will of course be necessary to prove to me that you are the real creator of the script because I will not want to lose precious scripts for no reason.
+If you see any of your scripts here and would like to have your credits or I remove them, you can contact me at: Kcaxx#4845. It will of course be necessary to prove to me that you are the real creator of the script because I will not want to lose precious scripts for no reason.
 
 If you want more Roblox scripts come to my Discord server! There are over 100 free scripting channels, renew daily. We have a few people at our disposal who supposedly detected corrupt scripts. If you want to become a "Bug Finder" too, try all of our scripts : discord.gg/SryuadSexT
 
